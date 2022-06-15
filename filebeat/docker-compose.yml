@@ -1,0 +1,17 @@
+version: '3.0'
+services:
+  filebeat:
+    container_name: fb-container
+    image: docker.elastic.co/beats/filebeat:7.8.0
+    user: root
+    command: filebeat -e -strict.perms=false
+    volumes:
+      - ./conf/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+# uncomment block bellow if want to run filebeat same network with ELK
+#     networks:
+#       - elasticsearch_es-net
+# networks:
+#   elasticsearch_es-net:
+#     external: true
