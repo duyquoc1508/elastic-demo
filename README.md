@@ -27,11 +27,11 @@ Sending Docker Logs to ElasticSearch and Kibana with FileBeat
 
 ### Environment & setup
 
-ELK: 7.8.0
-Filebeat: 7.8.0
-Docker: Docker version 20.10.14, build a224086
-Docker-compose: version 1.29.2, build 5becea4c
-OS: Windows 10. Work fine in Linux, Mac OS...
+- ELK: 7.8.0
+- Filebeat: 7.8.0
+- Docker: Docker version 20.10.14, build a224086
+- Docker-compose: version 1.29.2, build 5becea4c
+- OS: Windows 10. Work fine in Linux, Mac OS...
 
 ### 1. Run a service that wants to monitor log
 
